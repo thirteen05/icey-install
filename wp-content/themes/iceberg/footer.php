@@ -11,8 +11,6 @@
 
 
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/jquery.stellar/jquery.stellar.min.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/plugins.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
