@@ -22,9 +22,7 @@
                   'statuses/user_timeline',
                   array(
                       'screen_name'     => $twitterHandle,
-                      'count'           => $tweetQuantity,
-                      'exclude_replies' => true,
-                      
+                      'count'           => $tweetQuantity
                   )
               );
 ?>
