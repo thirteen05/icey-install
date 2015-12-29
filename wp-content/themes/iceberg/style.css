@@ -7336,3 +7336,49 @@ button.close {
   #section-home-example #logo {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)); }
+
+/* line 1, sass/_partials/_blog.scss */
+article {
+  display: block;
+  clear: both;
+  padding: 1% 0; }
+  /* line 6, sass/_partials/_blog.scss */
+  article a {
+    color: inherit;
+    display: block; }
+  /* line 10, sass/_partials/_blog.scss */
+  article a:hover {
+    color: inherit;
+    text-decoration: inherit; }
+  /* line 14, sass/_partials/_blog.scss */
+  article img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin-right: 10px; }
+
+/* line 22, sass/_partials/_blog.scss */
+.blog-pagination {
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-top: 20px; }
+  /* line 28, sass/_partials/_blog.scss */
+  .blog-pagination span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #CCC;
+    background-color: #DDD; }
+  /* line 34, sass/_partials/_blog.scss */
+  .blog-pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #DDD;
+    background-color: #CCC;
+    transition: ease all 0.4s;
+    -webkit-transition: ease all 0.4s;
+    -moz-transition: ease all 0.4s; }
+    /* line 35, sass/_partials/_blog.scss */
+    .blog-pagination a:hover {
+      color: #CCC;
+      background: #DDD; }
