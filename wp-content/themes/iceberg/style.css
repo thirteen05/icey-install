@@ -7328,6 +7328,15 @@ button.close {
 .color-epsilon {
   color: #555; }
 
+/* line 57, sass/_partials/_globals.scss */
+body {
+  padding-top: 90px; }
+
+/* line 1, sass/_partials/_navbar.scss */
+#bootstrap-navbar-patch {
+  height: 32px;
+  width: 100%; }
+
 /* line 1, sass/_partials/_home.scss */
 #section-home-example {
   background-color: #EEE;
