@@ -15,7 +15,7 @@ add_action('admin_menu', 'twitter1305_create_menu');
 function twitter1305_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('Twitter1305 Settings', 'Twitter1305 Settings', 'administrator', __FILE__, 'twitter1305_settings_page' , '
+	add_menu_page('Twitter1305 Settings', 'Twitter1305', 'administrator', __FILE__, 'twitter1305_settings_page' , '
 dashicons-welcome-widgets-menus' );
 
 	//call register settings function

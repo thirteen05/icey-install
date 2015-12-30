@@ -1,0 +1,48 @@
+article{
+    display: block;
+    clear: both;
+    padding: 1% 0;
+    
+    a{
+        color: inherit;
+        display: block;
+    }
+    a:hover{
+        color: inherit;
+        text-decoration: inherit;
+    }
+    img{
+        float: left;
+        width: 150px;
+        height: auto;
+        margin-right: 10px;
+    }
+}
+
+.blog-pagination{
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-top: 20px;
+
+  span{
+      display: inline-block;
+      padding: 5px 10px;
+      color: $color-beta;
+      background-color: $color-alpha;
+  }
+  a{
+      &:hover{
+          color: $color-beta;
+          background: $color-alpha
+      }
+
+      display: inline-block;
+      padding: 5px 10px;
+      color: $color-alpha;
+      background-color: $color-beta;
+      transition: ease all 0.4s;
+      -webkit-transition: ease all 0.4s;
+      -moz-transition: ease all 0.4s;
+  }
+}
