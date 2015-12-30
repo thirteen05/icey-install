@@ -1,45 +1,17 @@
-   <?php
-        
-        use Abraham\TwitterOAuth\TwitterOAuth;
-        //Configuration
-        $twitterHandle = get_option('twitterHandle');
-        $tweetQuantity = intval( get_option('tweetQuantity') );
-        $consumerKey = get_option('twitterAPI');
-        $consumerSecret = get_option('twitterSecret');
-        $accessToken = "";
-        $accessTokenSecret = ""; 
-
-        if($twitterHandle && $consumerKey && $consumerSecret) {
-              //Authentication with twitter
-              $twitterConnection = new TwitterOAuth(
-                  $consumerKey,
-                  $consumerSecret,
-                  $accessToken,
-                  $accessTokenSecret
-              );
-              //Get user timeline feeds
-              $twitterData = $twitterConnection->get(
-                  'statuses/user_timeline',
-                  array(
-                      'screen_name'     => $twitterHandle,
-                      'count'           => $tweetQuantity
-                  )
-              );
-?>
-
            <div class="tweet-list">
              <div class="container">
                 <div class="row tweet-row">
+                  
+                  <?php $twitterData = get_twitter1305(); ?>
 
                   <?php $tweet_number = 0; ?>
                  
                   <?php if(!empty($twitterData)): ?>
+                  
                     <?php foreach($twitterData as $tweet):
                             $tweet_number++;
-                            $latestTweet = $tweet->text;
-                            $latestTweet = preg_replace('/http:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<a href="http://$1" target="_blank">http://$1</a>', $latestTweet);
-                            $latestTweet = preg_replace('/https:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<a href="http://$1" target="_blank">https://$1</a>', $latestTweet);
-                            $latestTweet = preg_replace('/@([a-z0-9_]+)/i', '<a class="tweet-author" href="http://twitter.com/$1" target="_blank">@$1</a>', $latestTweet);
+                            $tweetText = $tweet->text;
+                            $tweetText = linkify_tweet($tweetText);
                             $tweetTime = date("l, F j",strtotime($tweet->created_at));
                     ?>
 
@@ -49,7 +21,7 @@
                             <h5 class="font-white tweeter-name"><?php echo $tweet->user->name; ?></h5>
                           </div>
                           <div class="tweet-content">
-                              <h4 class="title font-white" title="<?php echo $tweet->text; ?>"><?php echo $latestTweet; ?></h4>
+                              <h4 class="title font-white" title="<?php echo $tweet->text; ?>"><?php echo $tweetText; ?></h4>
                           </div>
                         <div class="tweet-meta">
                           <p class="meta font-white"><?php echo $tweetTime; ?></p>
@@ -71,9 +43,5 @@
                   <?php endif; ?>
              </div>
            </div>
-        <?php
-        }else{
-            echo 'Authentication failed, please try again.';
-        }
       
       ?>
