@@ -29,7 +29,7 @@
 
            <div class="tweet-list">
              <div class="container">
-                <div class="row">
+                <div class="row tweet-row">
 
                   <?php $tweet_number = 0; ?>
                  
@@ -58,7 +58,7 @@
                   
                       <?php if(in_array($tweet_number, array(3,6,9,12,15,18,21,24))): ?>
                </div>
-               <div class="row">
+               <div class="row tweet-row">
                   
                       <?php endif; ?>
 

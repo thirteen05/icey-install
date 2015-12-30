@@ -15,7 +15,8 @@ add_action('admin_menu', 'twitter1305_create_menu');
 function twitter1305_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('Twitter1305 Settings', 'Twitter1305 Settings', 'administrator', __FILE__, 'twitter1305_settings_page' , plugins_url('/images/icon.png', __FILE__) );
+	add_menu_page('Twitter1305 Settings', 'Twitter1305 Settings', 'administrator', __FILE__, 'twitter1305_settings_page' , '
+dashicons-welcome-widgets-menus' );
 
 	//call register settings function
 	add_action( 'admin_init', 'register_twitter1305_settings' );
@@ -28,6 +29,7 @@ function register_twitter1305_settings() {
 	register_setting( 'twitter1305-settings-group', 'twitterSecret' );
 	register_setting( 'twitter1305-settings-group', 'twitterHandle' );
 	register_setting( 'twitter1305-settings-group', 'tweetQuantity' );
+	register_setting( 'twitter1305-settings-group', 'tweetExcludeReplies' );
 }
 
 function twitter1305_settings_page() {
